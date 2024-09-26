@@ -19,10 +19,10 @@
 <body>
     <div class="container-fluid">
         <div class="row justify-content-md-center">
-            <div class="col">
-            1 of 2
+            <div class="col-md-6">
+                <img src="{{ asset('img/LogoInicio.jpg') }}" style="width: 100%; height: 633px;" class="img-fluid" alt="">
             </div>
-            <div class="col mt-5">
+            <div class="col-md-6 mt-5">
                 <div class="mb-5 offset-md-5 mt-5">
                     <h3>Psico</h3>
                     <strong>

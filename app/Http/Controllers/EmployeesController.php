@@ -66,9 +66,14 @@ class EmployeesController extends Controller
      */
     public function destroy($id)
     {
-        $employee = Employees::findOrFail($id);
-        $employee->delete();
+        try {
+            $employee = Employees::findOrFail($id);
+            $employee->delete();
 
-        return redirect()->route('employees');
+            return redirect()->route('employees');
+        } catch (\Throwable $th) {
+            return redirect()->route('employees');
+        }
+        
     }
 }
