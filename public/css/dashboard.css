@@ -1,0 +1,14 @@
+.content-dashboard{
+    margin-left: 7%;
+    margin-top: 2%;
+}
+
+.margin-text-info{
+    margin-top:10%
+}
+
+.nav-link:hover {
+    background-color: transparent !important;  /* Quita el fondo blanco */
+    color: inherit !important; /* Mantiene el color original del texto */
+    text-decoration: none !important; /* Quita el subrayado si lo tiene */
+}
