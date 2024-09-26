@@ -38,7 +38,7 @@
                                 </div>
                                 <div>
                                     <label for="department" class="form-label">Departamento</label>
-                                    <input type="text" required class="form-control" id="department" name="department">
+                                    <input type="text" required class="form-control" id="department" name="department" disabled>
                                 </div>
                             </div>
                         </div>
@@ -51,3 +51,24 @@
             </div>
         </div>
     </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var city = $('#city');
+        var department = $('#department');
+
+        function checkCity() {
+            if (city.val().trim() !== "") {
+                department.prop('disabled', false);
+            } else {
+                department.prop('disabled', true);
+            }
+        }
+
+        checkCity();
+
+        city.on('input', function() {
+            checkCity();
+        });
+    });
+</script>
